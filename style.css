@@ -1,12 +1,13 @@
+/* Body + background */
 body {
   margin: 0;
   font-family: 'Courier New', monospace;
   background: black;
   color: #00ffff;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
-/* Animated grid background */
+/* Neon grid background */
 .background {
   position: fixed;
   width: 100%;
@@ -25,12 +26,14 @@ body {
 .container {
   position: relative;
   text-align: center;
-  top: 20%;
+  top: 5%;
+  max-width: 600px;
+  margin: auto;
 }
 
-/* Glitch effect */
+/* Glitch header */
 .glitch {
-  font-size: 40px;
+  font-size: 50px;
   color: #ff00ff;
   text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
   animation: flicker 1.5s infinite alternate;
@@ -41,15 +44,22 @@ body {
   to { opacity: 1; }
 }
 
+.intro {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+/* Input & button */
 input {
   padding: 12px;
-  width: 250px;
-  margin: 20px;
+  width: 300px;
+  margin: 15px 0;
   background: black;
   border: 2px solid #00ffff;
   color: #00ffff;
   outline: none;
   box-shadow: 0 0 10px #00ffff;
+  border-radius: 5px;
 }
 
 button {
@@ -60,6 +70,7 @@ button {
   cursor: pointer;
   box-shadow: 0 0 10px #ff00ff;
   transition: 0.3s;
+  border-radius: 5px;
 }
 
 button:hover {
@@ -69,8 +80,8 @@ button:hover {
 
 /* Strength bar */
 .bar {
-  width: 250px;
-  height: 10px;
+  width: 300px;
+  height: 12px;
   background: #222;
   margin: 20px auto;
   border-radius: 5px;
@@ -81,4 +92,36 @@ button:hover {
   height: 100%;
   width: 0%;
   transition: 0.4s;
+}
+
+/* Tips */
+.tips {
+  text-align: left;
+  background: #111;
+  padding: 15px;
+  margin-top: 25px;
+  border-radius: 10px;
+  border: 1px solid #00ffff;
+}
+
+.tips h2 {
+  color: #ff00ff;
+  text-align: center;
+}
+
+.tips ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tips li {
+  margin: 10px 0;
+  padding-left: 10px;
+  position: relative;
+}
+
+.tips li::before {
+  content: "💡";
+  position: absolute;
+  left: 0;
 }
